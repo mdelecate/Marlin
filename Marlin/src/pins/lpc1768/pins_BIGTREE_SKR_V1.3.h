@@ -172,7 +172,7 @@
 #endif
 #if HOTENDS == 1
   #ifndef FAN1_PIN
-    #define FAN1_PIN       P2_04
+    #define FAN1_PIN       -1 //keenmetal disabled. This pin is connected to the Extruder Fan. By disabling, it can be referenced with E0_AUTO_FAN_PIN in Configuration_adv.h for automatic temperature based control. Default value was P2_04.
   #endif
 #else
   #ifndef HEATER_1_PIN
