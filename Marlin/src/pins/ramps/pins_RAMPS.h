@@ -89,7 +89,7 @@
     #define X_MIN_PIN       3
   #endif
   #ifndef X_MAX_PIN
-    #define X_MAX_PIN       2
+    #define X_MAX_PIN       -1 //keenmetal disabled X_MAX_PIN from 2 to -1 to repurpose this pin for the filament sensor
   #endif
 #endif
 #ifndef Y_STOP_PIN
@@ -221,7 +221,7 @@
 #elif DISABLED(IS_RAMPS_SF)                    // Not Spindle, Fan (i.e., "EFBF" or "EFBE")
   #define HEATER_BED_PIN   RAMPS_D8_PIN
   #if HOTENDS == 1
-    #define FAN1_PIN       MOSFET_D_PIN
+    #define FAN1_PIN       -1 //keenmetal disabled (defined as Pin 7). This pin is connected to the Extruder Fan. By disabling, it can be referenced with E0_AUTO_FAN_PIN in Configuration_adv.h for automatic temperature based control. Default value was MOSFET_D_PIN.
   #else
     #define HEATER_1_PIN   MOSFET_D_PIN
   #endif
@@ -235,7 +235,7 @@
   #elif ENABLED(IS_RAMPS_EEB)                  // Hotend, Hotend, Bed
     #define FAN_PIN         4                  // IO pin. Buffer needed
   #else                                        // Non-specific are "EFB" (i.e., "EFBF" or "EFBE")
-    #define FAN_PIN        RAMPS_D9_PIN
+    #define FAN_PIN        RAMPS_D9_PIN         //keenmetal comment for reference: this is the pin that controls the part cooling fan
   #endif
 #endif
 
@@ -251,7 +251,7 @@
 
 // RAMPS 1.4 DIO 4 on the servos connector
 #ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN    4
+  #define FIL_RUNOUT_PIN    2   //keenmetal - to enable filament runout detection by Marlin, move the white 3-pin connector from the TFT board to the MKS Gen L board and insert into pin D2 (unused red plug for X+ axis endstop). Default value was 4. 
 #endif
 
 #ifndef PS_ON_PIN
