@@ -347,7 +347,7 @@
  * the fan will turn on when any selected extruder is above the threshold.
  */
 
-#define E0_AUTO_FAN_PIN 7 //keenmetal - disabled FAN1_PIN pins_RAMPS.h and assigned MOSFET_D_PIN / Pin 7 to E0_AUTO_FAN_PIN instead for automatic temperature based extruder cooling. It now activates above 50ºC, even when preheating. 
+#define E0_AUTO_FAN_PIN P2_4 //keenmetal - I've disabled FAN1_PIN in pins_BIGTREE_SKR_V1.3.h and assigned P2_4 to E0_AUTO_FAN_PIN instead for automatic temperature based extruder cooling. It now activates above 50ºC, even when preheating. For MKS Gen L: Change this value to 7. I've disabled FAN1_PIN in pins_RAMPS.h and assigned MOSFET_D_PIN / Pin 7 to E0_AUTO_FAN_PIN.  
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
