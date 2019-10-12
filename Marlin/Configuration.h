@@ -122,7 +122,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200 //keenmetal changed for Bigtreetech SKR 1.3
+#define BAUDRATE 250000 //keenmetal changed for Bigtreetech SKR 1.3
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
