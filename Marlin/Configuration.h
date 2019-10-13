@@ -698,7 +698,7 @@
  *
  * :[2,3,4,5,6,7]
  */
-#define ENDSTOP_NOISE_THRESHOLD 2 //keenmetal enabled
+//#define ENDSTOP_NOISE_THRESHOLD 2 //keenmetal 
 
 //=============================================================================
 //============================== Movement Settings ============================
