@@ -44,8 +44,8 @@
 #define X_MAX_PIN          P1_28
 #define Y_MIN_PIN          P1_27
 #define Y_MAX_PIN          P1_26
-#define Z_MIN_PIN          P1_25
-#define Z_MAX_PIN          P1_24
+#define Z_MIN_PIN          P1_24 // Switched Z_MIN_PIN and Z_MAX_PIN so BLTouch black cable can be plugged into the signal pin of unused port Z_MAX (without having to move other cables) Original value: P1_25  
+#define Z_MAX_PIN          P1_25 // See line above for comment. Original value: P1_24
 
 //
 // Z Probe (when not Z_MIN_PIN)
