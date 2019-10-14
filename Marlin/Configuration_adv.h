@@ -1075,7 +1075,7 @@
      *
      * :[ 'LCD', 'ONBOARD', 'CUSTOM_CABLE' ]
      */
-    #define SDCARD_CONNECTION ONBOARD //keenmetal enabled and changed from LCD
+    //#define SDCARD_CONNECTION LCD
   #endif
 
 #endif // SDSUPPORT
