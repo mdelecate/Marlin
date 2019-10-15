@@ -987,7 +987,7 @@
   #endif
 
   // This allows hosts to request long names for files and folders with M33
-  //#define LONG_FILENAME_HOST_SUPPORT
+  #define LONG_FILENAME_HOST_SUPPORT //keenmetal enabled
 
   // Enable this option to scroll long filenames in the SD card menu
   //#define SCROLL_LONG_FILENAMES
@@ -1494,16 +1494,16 @@
 // The number of linear motions that can be in the plan at any give time.
 // THE BLOCK_BUFFER_SIZE NEEDS TO BE A POWER OF 2 (e.g. 8, 16, 32) because shifts and ors are used to do the ring-buffering.
 #if ENABLED(SDSUPPORT)
-  #define BLOCK_BUFFER_SIZE 16 // SD,LCD,Buttons take more memory, block buffer needs to be smaller
+  #define BLOCK_BUFFER_SIZE 32 // keenmetal changed from 16 // SD,LCD,Buttons take more memory, block buffer needs to be smaller
 #else
-  #define BLOCK_BUFFER_SIZE 16 // maximize block buffer
+  #define BLOCK_BUFFER_SIZE 32 // keenmetal changed from 16 // maximize block buffer
 #endif
 
 // @section serial
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 4
+#define BUFSIZE 16 // keenmetal changed from 4
 
 // Transmission to Host Buffer Size
 // To save 386 bytes of PROGMEM (and TX_BUFFER_SIZE+3 bytes of RAM) set to 0.
@@ -1543,7 +1543,7 @@
 // enter the serial receive buffer, so they cannot be blocked.
 // Currently handles M108, M112, M410
 // Does not work on boards using AT90USB (USBCON) processors!
-//#define EMERGENCY_PARSER
+#define EMERGENCY_PARSER //keenmetal enabled
 
 // Bad Serial-connections can miss a received command by sending an 'ok'
 // Therefore some clients abort after 30 seconds in a timeout.
