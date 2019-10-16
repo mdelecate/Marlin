@@ -473,9 +473,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   //Artillery/Evnovo Sidewinder X1 with silicone sock	- keenmetal
-  #define DEFAULT_Kp 11.26		
-  #define DEFAULT_Ki 0.61		
-  #define DEFAULT_Kd 52.06
+  #define DEFAULT_Kp 10.88		
+  #define DEFAULT_Ki 0.58		
+  #define DEFAULT_Kd 50.74
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
