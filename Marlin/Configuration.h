@@ -472,10 +472,10 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  //Artillery/Evnovo Sidewinder X1 default values - keenmetal
-  #define DEFAULT_bedKp 244.21		
-  #define DEFAULT_bedKi 45.87		
-  #define DEFAULT_bedKd 325.08
+  //Artillery/Evnovo Sidewinder X1 with silicone sock	- keenmetal
+  #define DEFAULT_Kp 11.26		
+  #define DEFAULT_Ki 0.61		
+  #define DEFAULT_Kd 52.06
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
