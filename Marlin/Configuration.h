@@ -472,10 +472,10 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  //Artillery/Evnovo Sidewinder X1 default values	- keenmetal
-  #define DEFAULT_Kp 14.58		
-  #define DEFAULT_Ki 1.14		
-  #define DEFAULT_Kd 46.57
+  //Artillery/Evnovo Sidewinder X1 default values - keenmetal
+  #define DEFAULT_bedKp 244.21		
+  #define DEFAULT_bedKi 45.87		
+  #define DEFAULT_bedKd 325.08
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
@@ -928,7 +928,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 28, -33, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 27, -36, 15 } // keenmetal
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 35
@@ -1027,9 +1027,9 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
-#define INVERT_Y_DIR false //keenmetal edited
-#define INVERT_Z_DIR true //keenmetal edited
+#define INVERT_X_DIR true //keenmetal edited for TMC 2209. Default for TMC2100 is the false
+#define INVERT_Y_DIR true //keenmetal edited for TMC 2209. Default for TMC2100 is the false
+#define INVERT_Z_DIR false //keenmetal edited for TMC 2209. Default for TMC2100 is the true
 
 // @section extruder
 
