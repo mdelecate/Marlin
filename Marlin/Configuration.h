@@ -934,13 +934,13 @@
 #define MIN_PROBE_EDGE 35
 
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 9000
+#define XY_PROBE_SPEED 15000
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 
 // Feedrate (mm/m) for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
+#define Z_PROBE_SPEED_SLOW (8*60) //keenmetal changed from default: (Z_PROBE_SPEED_FAST / 2)
 
 /**
  * Multiple Probing
@@ -968,10 +968,10 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   15 // Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
-#define Z_AFTER_PROBING           15 // Z position after probing is done
+#define Z_CLEARANCE_DEPLOY_PROBE   0 //keenmetal // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_BETWEEN_PROBES  3 //keenmetal // Z Clearance between probe points
+#define Z_CLEARANCE_MULTI_PROBE     3 //keenmetal // Z Clearance between multiple probes
+#define Z_AFTER_PROBING           0 //keenmetal // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
 
@@ -1323,7 +1323,7 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING //keenmetal enabled
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
@@ -1332,7 +1332,7 @@
 
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (60*60) //keenmetal
-#define HOMING_FEEDRATE_Z  (16*60) //keenmetal
+#define HOMING_FEEDRATE_Z  (20*60) //keenmetal
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
