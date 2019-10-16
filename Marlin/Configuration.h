@@ -928,7 +928,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 27, -36, -3 } // keenmetal
+#define NOZZLE_TO_PROBE_OFFSET { 27, -36, -2.4 } // keenmetal
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 35
@@ -937,7 +937,7 @@
 #define XY_PROBE_SPEED 15000
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_SPEED_FAST (24*60)
+#define Z_PROBE_SPEED_FAST (30*60)
 
 // Feedrate (mm/m) for the "accurate" probe of each point
 #define Z_PROBE_SPEED_SLOW (8*60) //keenmetal changed from default: (Z_PROBE_SPEED_FAST / 2)
@@ -968,7 +968,7 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   7 //keenmetal // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_DEPLOY_PROBE   5 //keenmetal // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  5 //keenmetal // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE     5 //keenmetal // Z Clearance between multiple probes
 #define Z_AFTER_PROBING           1 //keenmetal // Z position after probing is done
