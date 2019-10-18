@@ -473,7 +473,7 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  //Artillery/Evnovo Sidewinder X1 with silicone sock	- keenmetal
+  //Artillery/Evnovo Sidewinder X1 with silicone sock	- Autotuned by keenmetal
   #define DEFAULT_Kp 10.88		
   #define DEFAULT_Ki 0.58		
   #define DEFAULT_Kd 50.74
@@ -528,10 +528,10 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  //Artillery/Evnovo Sidewinder X1 default values - keenmetal
-  #define DEFAULT_bedKp 244.21		
-  #define DEFAULT_bedKi 45.87		
-  #define DEFAULT_bedKd 325.08
+  //Artillery/Evnovo Sidewinder X1 - Autotuned by keenmetal
+  #define DEFAULT_bedKp 25.88	//244.21 	
+  #define DEFAULT_bedKi 2.06		//45.87
+  #define DEFAULT_bedKd 216.95  //325.08
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
