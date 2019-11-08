@@ -421,11 +421,11 @@
 //#define TEMP_SENSOR_1_AS_REDUNDANT
 #define MAX_REDUNDANT_TEMP_SENSOR_DIFF 10
 
-#define TEMP_RESIDENCY_TIME     5  // (seconds) Time to wait for hotend to "settle" in M109 //keenmetal changed from 10
+#define TEMP_RESIDENCY_TIME     2  // (seconds) Time to wait for hotend to "settle" in M109 //keenmetal changed from 10
 #define TEMP_WINDOW              5  // (°C) Temperature proximity for the "temperature reached" timer //keenmetal changed from 1
 #define TEMP_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
 
-#define TEMP_BED_RESIDENCY_TIME 5  // (seconds) Time to wait for bed to "settle" in M190
+#define TEMP_BED_RESIDENCY_TIME 2  // (seconds) Time to wait for bed to "settle" in M190
 #define TEMP_BED_WINDOW          5  // (°C) Temperature proximity for the "temperature reached" timer //keenmetal changed from 1
 #define TEMP_BED_HYSTERESIS      3  // (°C) Temperature proximity considered "close enough" to the target
 
