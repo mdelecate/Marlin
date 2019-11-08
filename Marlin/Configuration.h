@@ -423,11 +423,11 @@
 
 #define TEMP_RESIDENCY_TIME     5  // (seconds) Time to wait for hotend to "settle" in M109 //keenmetal changed from 10
 #define TEMP_WINDOW              5  // (°C) Temperature proximity for the "temperature reached" timer //keenmetal changed from 1
-#define TEMP_HYSTERESIS          4.5  // (°C) Temperature proximity considered "close enough" to the target //keenmetal changed from 3
+#define TEMP_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
 
-#define TEMP_BED_RESIDENCY_TIME 10  // (seconds) Time to wait for bed to "settle" in M190
-#define TEMP_BED_WINDOW          3  // (°C) Temperature proximity for the "temperature reached" timer //keenmetal changed from `
-#define TEMP_BED_HYSTERESIS      1  // (°C) Temperature proximity considered "close enough" to the target //keenmetal changed from 3
+#define TEMP_BED_RESIDENCY_TIME 5  // (seconds) Time to wait for bed to "settle" in M190
+#define TEMP_BED_WINDOW          5  // (°C) Temperature proximity for the "temperature reached" timer //keenmetal changed from 1
+#define TEMP_BED_HYSTERESIS      3  // (°C) Temperature proximity considered "close enough" to the target
 
 // Below this temperature the heater will be switched off
 // because it probably indicates a broken thermistor wire.
@@ -473,7 +473,7 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  //Artillery/Evnovo Sidewinder X1 with silicone sock	- keenmetal
+  //Artillery/Evnovo Sidewinder X1 with silicone sock	- Autotuned by keenmetal
   #define DEFAULT_Kp 10.88		
   #define DEFAULT_Ki 0.58		
   #define DEFAULT_Kd 50.74
@@ -528,10 +528,10 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  //Artillery/Evnovo Sidewinder X1 default values - keenmetal
-  #define DEFAULT_bedKp 244.21		
-  #define DEFAULT_bedKi 45.87		
-  #define DEFAULT_bedKd 325.08
+  //Artillery/Evnovo Sidewinder X1 - Autotuned by keenmetal
+  #define DEFAULT_bedKp 25.88	//244.21 	
+  #define DEFAULT_bedKi 2.06		//45.87
+  #define DEFAULT_bedKd 216.95  //325.08
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
@@ -726,14 +726,14 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.121, 80.121, 399.778, 445 } //keenmetal - default values were: { 80, 80, 4000, 500 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.121, 80.521, 1607, 471 } //keenmetal - Artillery default values were: { 80.121, 80.121, 399.778, 445 } / default values were: { 80, 80, 4000, 500 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 50, 40 } //keenmetal - default values were: { 300, 300, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 20, 40 } //keenmetal - default values were: { 300, 300, 5, 25 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -746,7 +746,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 4800, 4800, 100, 10000 } //keenmetal - default values were: { 3000, 3000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 2000, 2000, 100, 10000 } //keenmetal - default values were: { 3000, 3000, 100, 10000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -795,7 +795,7 @@
  *   http://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
  */
 #if DISABLED(CLASSIC_JERK)
-  #define JUNCTION_DEVIATION_MM 0.05 // (mm) Distance from real junction edge //keenmetal - default value: 0.013
+  #define JUNCTION_DEVIATION_MM 0.045 // (mm) Distance from real junction edge //keenmetal - default value: 0.013
 #endif
 
 /**
@@ -929,7 +929,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 27, -36, -0.33 } // keenmetal
+#define NOZZLE_TO_PROBE_OFFSET { 27, -36, -2.7 } // keenmetal
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 35
