@@ -935,10 +935,10 @@
 #define MIN_PROBE_EDGE 35
 
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 15000
+#define XY_PROBE_SPEED (250*60)
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_SPEED_FAST (30*60)
+#define Z_PROBE_SPEED_FAST (8*60)
 
 // Feedrate (mm/m) for the "accurate" probe of each point
 #define Z_PROBE_SPEED_SLOW (8*60) //keenmetal changed from default: (Z_PROBE_SPEED_FAST / 2)
@@ -972,13 +972,13 @@
 #define Z_CLEARANCE_DEPLOY_PROBE   8 //keenmetal // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  2 //keenmetal // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE     2 //keenmetal // Z Clearance between multiple probes
-#define Z_AFTER_PROBING           1 //keenmetal // Z position after probing is done
+#define Z_AFTER_PROBING           2.34 //keenmetal // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
-#define Z_PROBE_OFFSET_RANGE_MIN -20
-#define Z_PROBE_OFFSET_RANGE_MAX 20
+#define Z_PROBE_OFFSET_RANGE_MIN -5 //keenmetal
+#define Z_PROBE_OFFSET_RANGE_MAX 5 //keenmetal
 
 // Enable the M48 repeatability test to test probe accuracy
 #define Z_MIN_PROBE_REPEATABILITY_TEST
