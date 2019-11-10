@@ -929,7 +929,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 27, -36, -2.33 } // keenmetal
+#define NOZZLE_TO_PROBE_OFFSET { 27, -36, -2 } // keenmetal
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 35
@@ -972,7 +972,7 @@
 #define Z_CLEARANCE_DEPLOY_PROBE   8 //keenmetal // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  2 //keenmetal // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE     2 //keenmetal // Z Clearance between multiple probes
-#define Z_AFTER_PROBING           2 //keenmetal // Z position after probing is done
+#define Z_AFTER_PROBING           5 //keenmetal // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
 
