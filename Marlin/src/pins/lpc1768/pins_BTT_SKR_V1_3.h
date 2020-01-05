@@ -46,8 +46,8 @@
 #endif
 
 #if Z_HOME_DIR == -1 || !Z_STALL_SENSITIVITY
-  #define Z_MIN_PIN          P1_25   // Z_MIN
-  #define Z_MAX_PIN          P1_24   // Z_MAX
+  #define Z_MIN_PIN          P1_24   // Z_MIN //KeenMetal Switched Z_MIN_PIN and Z_MAX_PIN so BLTouch black cable can be plugged into the signal pin of unused port Z_MAX (without having to move other cables) Original value: P1_25  
+  #define Z_MAX_PIN          P1_25   // Z_MAX //KeenMetal See line above for comment. Original value: P1_24
 #else
   #define Z_MIN_PIN          P1_24   // Z_MAX
   #define Z_MAX_PIN          P1_25   // Z_MIN
