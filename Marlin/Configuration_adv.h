@@ -3130,7 +3130,7 @@
   //#define SERVICE_INTERVAL_3    1 // print hours
 #endif
 
-//Custom pin settings
+//KeenMetal - Custom pin settings
   //pins_BTT_SKR_V1_3.h
     #define Z_MIN_PIN          P1_24   // KeenMetal Switched Z_MIN_PIN and Z_MAX_PIN so BLTouch black cable can be plugged into the signal pin of unused port Z_MAX (without having to move other cables) Original value: P1_25  
     #define Z_MAX_PIN          P1_25   // Z_MAX //KeenMetal See line above for comment. Original value: P1_24
