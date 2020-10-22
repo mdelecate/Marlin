@@ -1656,7 +1656,7 @@
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
   #define LIN_ADVANCE_K 0.04    // Unit: mm compression per 1mm/s extruder speed //keenmetal - default value was 0.22
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
-  //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
+  #define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration //keenmetal enabled
 #endif
 
 // @section leveling
